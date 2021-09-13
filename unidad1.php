@@ -26,10 +26,15 @@
 			<input type="date" name="date" required placeholder="Fecha">
 			<input type="submit" value="Agregar unidad">
 		</form>
+		<?php if(isset($_GET['ok'])){
+			echo "<h4>Unidad cargada!</h4>";
+		}
+		?>
 	</section>
+	
 	<aside>
-    
-  </aside>
+    	<?php include("ver_clases.php"); ?>
+  	</aside>
 	<footer>
 		<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
 	</footer>
