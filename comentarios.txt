@@ -1,0 +1,6 @@
+<div>
+            <h4>Nombre y Apellido: </h4><p>Ezequiel Astrada</p>
+            <h4>E-mail: </h4>astradaezequiel.tpi@gmail.com
+            <h4>Comentario: </h4><p>Hola, dejo mi comentario! Gracias</p>
+            <h4>Fecha: </h4><p>20-09-2021, 4:13 am</p>
+            </div>

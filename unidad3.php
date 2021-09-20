@@ -20,8 +20,22 @@
 	<section>
 		<h2>Comentarios</h2>
 	</section>
+	<section>
+	<form method="POST" action="unidad3.php" >
+		<input type="text" name="nom_ape" placeholder="Nombre y Apellido" required>
+		<input type="email" name="email" placeholder="Correo Electronico" required>
+		<textarea name="mensaje" placeholder="Escribe tu comentario" cols="55" rows="10" required></textarea>
+		<input type="submit" value ="Enviar Comentario">
+	</form>
+	</section>
+
 	<aside>
-    
+		<?php 
+			include ("comentarios.php");	
+			$mensaje = fopen('comentarios.txt','r');
+			fpassthru($mensaje);
+			fclose($mensaje);
+		?>
   </aside>
 	<footer>
 		<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
