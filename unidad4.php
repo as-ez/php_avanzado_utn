@@ -19,6 +19,9 @@
 	</header>
 	<section>
 		<h2>Imágenes con PHP</h2>
+		<h3>Marca de agua</h3>
+		<img src='marca_agua.php' alt='marca de agua'>
+		<img src='img_thumb.php' alt='img_thumb'>
 	</section>
 	<aside>
     
