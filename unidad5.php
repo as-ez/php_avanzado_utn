@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,6 +20,34 @@
 	</header>
 	<section>
 		<h2>Consultas</h2>
+		<?php 
+		function contenido_captcha () {
+			$cadena = "0123456789abcdefghijklmnopqrstuvwxyz#$&?";
+			$codigo = '';
+			for ($i=0; $i < 5; $i++) { 
+				$codigo .= $cadena[rand(0,39)];
+			}
+			return $codigo;
+		}
+
+		$_SESSION['captcha'] = contenido_captcha();
+	?>
+	</section>
+	<section>
+	<form method="POST" action="cargar.php" >
+		<input type="text" name="nombre" placeholder="Nombre" required>
+		<input type="text" name="apellido" placeholder="Apellido" required>
+		<input type="email" name="email" placeholder="Correo Electronico" required>
+		<textarea name="consulta" placeholder="Escribe tu consulta" cols="55" rows="10" required></textarea>
+		<label>Codigo de verificacion</label>
+		<img src="captcha.php">
+		<input type="text" name="codigo_captcha">
+		<input type="submit" value ="Enviar Consulta">
+	</form>
+	<?php
+	if(isset($_GET['error'])) { echo "<p>Codigo incorrecto!</p>";}
+	if(isset($_GET['ok'])) { echo "<p>Consulta enviada correctamente!</p>";}
+	?>
 	</section>
 	<aside>
     
