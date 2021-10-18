@@ -20,6 +20,15 @@
 	<section>
 		<h2>Usuarios</h2>
 	</section>
+	<section>
+		<form method="POST" action="unidad6.php">
+			<input type="text" name="nombre" placeholder="Nombre" required>
+			<input type="text" name="apellido" placeholder="Apellido" required>
+			<input type="number" name="edad" placeholder="edad" min=0 max=120 required>
+			<input type="submit" value ="Generar Usuario">
+		</form>
+	</section>
+	<section><?php include("caract_usuarios.php"); ?></section>
 	<aside>
     
   </aside>
